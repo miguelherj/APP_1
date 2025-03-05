@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Química Sanguínea</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>QUÍMICA SANGUÍNEA</h1>
+    
+    <!-- Sección de Formulario Inicial -->
+    <div class="container" id="formulario">
+        <form>
+            <div class="form-group">
+                <label>No. de Orden:</label>
+                <input type="text" id="orden">
+                <label>Usuario:</label>
+                <input type="text" id="usuario">
+            </div>
+
+            <div class="form-group">
+                <label>Documento ID:</label>
+                <input type="text" id="documento">
+                <label>Médico:</label>
+                <input type="text" id="medico">
+            </div>
+
+            <div class="form-group">
+                <label>Fec. Ingreso:</label>
+                <input type="date" id="fecha_ingreso">
+                <label>Edad:</label>
+                <input type="number" id="edad" min="0">
+            </div>
+
+            <button type="button" class="submit-btn" onclick="mostrarResultados()">Continuar</button>
+        </form>
+    </div>
+
+    <!-- Sección de Resultados -->
+    <div class="container" id="resultados" style="display: none;">
+        <h2>Ingrese sus Resultados</h2>
+        <p>Por favor, ingrese los valores de sus exámenes:</p>
+
+        <div class="grid-container">
+            <div class="form-group"><label>Insulina:</label><input type="number" id="insulina" step="0.01"></div>
+            <div class="form-group"><label>Cortisol:</label><input type="number" id="cortisol" step="0.01"></div>
+            <div class="form-group"><label>Glucemia Basal:</label><input type="number" id="glucemia_basal" step="0.01"></div>
+            <div class="form-group"><label>Hb1Ac:</label><input type="number" id="hb1ac" step="0.01"></div>
+            <div class="form-group"><label>TSH:</label><input type="number" id="tsh" step="0.01"></div>
+            <div class="form-group"><label>T4L:</label><input type="number" id="t4l" step="0.01"></div>
+            <div class="form-group"><label>Perfil Lipídico:</label><input type="number" id="perfil_lipidico" step="0.01"></div>
+            <div class="form-group"><label>Ácido Úrico:</label><input type="number" id="acido_urico" step="0.01"></div>
+            <div class="form-group"><label>Creatinina:</label><input type="number" id="creatinina" step="0.01"></div>
+            <div class="form-group"><label>TGO:</label><input type="number" id="tgo" step="0.01"></div>
+            <div class="form-group"><label>TGP:</label><input type="number" id="tgp" step="0.01"></div>
+            <div class="form-group"><label>Antígeno Prostático Total (Opcional):</label><input type="number" id="antigeno_prostatico" step="0.01"></div>
+        </div>
+
+        <button type="button" class="submit-btn" onclick="mostrarAnalisis()">Análisis de Resultados</button>
+    </div>
+
+    <!-- Sección de Análisis de Resultados -->
+    <div class="container" id="analisis" style="display: none;">
+        <h1>Análisis de Resultados</h1>
+        <div class="resultados-grid">
+            <p id="resultadoTexto">Aquí se mostrará el análisis de los valores ingresados.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

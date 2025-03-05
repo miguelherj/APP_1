@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #b3e0e5;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+.container {
+    background: white;
+    width: 60%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    width: 40%;
+    text-align: left;
+}
+
+input {
+    width: 55%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    background: #006d5b;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+.submit-btn:hover {
+    background: #004d3d;
+}
+
+/* Estilos mejorados para la sección de resultados */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.resultados-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    margin: auto;
+}
+
+.resultados-grid p {
+    text-align: left;
+    font-size: 16px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #006d5b;
+    color: white;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+/* Estilo para las recomendaciones con el ✅ */
+td:contains('✅') {
+    color: green;
+    font-weight: bold;
+}
+
